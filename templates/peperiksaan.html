@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Background Video -->
+<video autoplay muted loop id="bg-video">
+  <source src="{{ url_for('static', filename='videos/movie5.mp4') }}" type="video/mp4">
+  Browser anda tidak menyokong video.
+</video>
+
+<h2 class="title" data-aos="fade-down">Peperiksaan ICT</h2>
+<ul class="exam-list">
+  <li><a href="https://forms.gle/fs2CGvkiwhTjiZMy7" target="_blank">Ujian Pertengahan Tahun</a></li>
+</ul>
+
+<style>
+  /* Styling background video */
+  #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Pastikan video di belakang */
+    object-fit: cover;
+    object-position:center 100%; /* adjust video bawah navigasi menu */
+  }
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Laman Utama{% endblock %}
+
+{% block content %}
+<!-- Video sebagai background -->
+<div style="position: relative; overflow: hidden;">
+    <video autoplay muted loop playsinline
+           style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="{{ url_for('static', filename='videos/movie.mp4') }}" type="video/mp4">
+        Browser anda tidak menyokong video.
+    </video>
+
+    <!-- Kandungan di atas video -->
+    <div class="text-center d-flex flex-column justify-content-center align-items-center"
+         style="height: 90vh; color: white; position: relative; z-index: 1;">
+        <img src="{{ url_for('static', filename='images/logo.png') }}"
+             alt="Logo Sekolah" width="150" class="mb-3 animate__animated animate__zoomIn">
+
+        <h1 class="animate__animated animate__fadeInDown">Selamat Datang ke Laman Web ICT!</h1>
+        <p class="lead animate__animated animate__fadeInUp">Laman web rasmi untuk subjek ICT.</p>
+        <p class="animate__animated animate__fadeInUp animate__delay-1s">Tekan menu atas untuk navigasi ke bahagian lain.</p>
+    </div>
+</div>
+{% endblock %}

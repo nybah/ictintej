@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Hubungi Kami{% endblock %}
+
+{% block content %}
+<!-- Video sebagai background -->
+<div style="position: relative; overflow: hidden;">
+    <video autoplay muted loop playsinline
+           style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="{{ url_for('static', filename='videos/movie2.mp4') }}" type="video/mp4">
+        Browser anda tidak menyokong video.
+    </video>
+
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <div class="logo-animasi text-primary">FEEDBACK</div>
+        <p class="lead">Hantar maklum balas anda di bawah untuk penambahbaikkan  👇</p>
+    </div>
+
+    <div class="card shadow p-4">
+        <form action="/hasil" method="POST">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="mb-3">
+                <label for="kelas" class="form-label">Kelas</label>
+                <input type="text" class="form-control" id="kelas" name="kelas" required>
+            </div>
+            <div class="mb-3">
+                <label for="mesej" class="form-label">Mesej</label>
+                <textarea class="form-control" id="mesej" name="mesej" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Hantar</button>
+        </form>
+    </div>
+
+    <a href="/" class="btn btn-primary mt-4">Kembali ke Laman Utama</a>
+</div>
+
+<style>
+    .logo-animasi {
+        font-size: 2rem;
+        font-weight: bold;
+        animation: slideIn 2s ease-out;
+    }
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>
+{% endblock %}

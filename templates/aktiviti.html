@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Aktiviti ICT{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold text-primary">Aktiviti ICT Mengikut Tingkatan</h1>
+        <p class="lead">PAGE INI MASIH DALAM TEMPOH PERCUBAAN</p>
+    </div>
+
+    <!-- Navigation Tab -->
+    <ul class="nav nav-tabs mb-4" id="aktivitiTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tingkatan1-tab" data-bs-toggle="tab" data-bs-target="#tingkatan1" type="button" role="tab">Tingkatan 1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tingkatan2-tab" data-bs-toggle="tab" data-bs-target="#tingkatan2" type="button" role="tab">Tingkatan 2</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tingkatan3-tab" data-bs-toggle="tab" data-bs-target="#tingkatan3" type="button" role="tab">Tingkatan 3</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tingkatan4-tab" data-bs-toggle="tab" data-bs-target="#tingkatan4" type="button" role="tab">Tingkatan 4</button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="aktivitiTabContent">
+        <!-- Tingkatan 1 -->
+        <div class="tab-pane fade show active" id="tingkatan1" role="tabpanel">
+            <h3 class="text-success">Aktiviti Tingkatan 1</h3>
+            <ul>
+                <li>Pengenalan kepada Komputer</li>
+                <li>Asas Microsoft Office</li>
+                <li>Kemahiran Internet & Email</li>
+            </ul>
+        </div>
+
+        <!-- Tingkatan 2 -->
+        <div class="tab-pane fade" id="tingkatan2" role="tabpanel">
+            <h3 class="text-success">Aktiviti Tingkatan 2</h3>
+            <ul>
+                <li>Pengenalan kepada Pengaturcaraan</li>
+                <li>HTML & Reka Bentuk Laman Web</li>
+                <li>Projek Mini ICT</li>
+            </ul>
+        </div>
+
+        <!-- Tingkatan 3 -->
+        <div class="tab-pane fade" id="tingkatan3" role="tabpanel">
+            <h3 class="text-success">Aktiviti Tingkatan 3</h3>
+            <ul>
+                <li>Python Asas</li>
+                <li>Pembinaan Aplikasi Mudah</li>
+                <li>Pertandingan ICT Sekolah</li>
+            </ul>
+        </div>
+
+        <!-- Tingkatan 4 -->
+        <div class="tab-pane fade" id="tingkatan4" role="tabpanel">
+            <h3 class="text-success">Aktiviti Tingkatan 4</h3>
+            <ul>
+                <li>Python Lanjutan</li>
+                <li>Projek Sistem Maklumat</li>
+                <li>Pembelajaran Data & AI Asas</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

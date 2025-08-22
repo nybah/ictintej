@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Nota ICT{% endblock %}
+{% block content %}
+
+<!-- Background Video -->
+<video autoplay muted loop id="bg-video">
+  <source src="{{ url_for('static', filename='videos/movie3.mp4') }}" type="video/mp4">
+  Browser anda tidak menyokong video.
+</video>
+
+<h2 class="title text-white text-center mb-4" data-aos="fade-down">Nota ICT</h2>
+
+<div class="row g-4">
+
+  <!-- Tingkatan 1 -->
+  <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+    <div class="card bg-dark text-white h-100 shadow-lg border-light">
+      <div class="card-body text-center">
+        <h4 class="card-title">TINGKATAN 1</h4>
+        <p><a href="{{ url_for('static', filename='nota/nota1.pdf') }}" target="_blank" class="text-info">Pengenalan ICT</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota2.pdf') }}" target="_blank" class="text-info">Sistem Pengoperisian</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota3.pdf') }}" target="_blank" class="text-info">Nota Microsoft Word</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota4.pdf') }}" target="_blank" class="text-info">Nota Microsoft Excel</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tingkatan 2 -->
+  <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+    <div class="card bg-dark text-white h-100 shadow-lg border-light">
+      <div class="card-body text-center">
+        <h4 class="card-title">TINGKATAN 2</h4>
+        <p><a href="{{ url_for('static', filename='nota/nota5.pdf') }}" target="_blank" class="text-info">Intro to Good Presentation</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota6.pdf') }}" target="_blank" class="text-info">Nota PowerPoint & Google Slide</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota7.pdf') }}" target="_blank" class="text-info">Nota Microbit</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tingkatan 3 -->
+  <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+    <div class="card bg-dark text-white h-100 shadow-lg border-light">
+      <div class="card-body text-center">
+        <h4 class="card-title">TINGKATAN 3</h4>
+        <p><a href="{{ url_for('static', filename='nota/nota8.pdf') }}" target="_blank" class="text-info">Nota Microsoft Access</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota9.pdf') }}" target="_blank" class="text-info">Nota Locker Studio</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota10.pdf') }}" target="_blank" class="text-info">Nota Asas Arduino</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tingkatan 4 -->
+  <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+    <div class="card bg-dark text-white h-100 shadow-lg border-light">
+      <div class="card-body text-center">
+        <h4 class="card-title">TINGKATAN 4</h4>
+        <p><a href="{{ url_for('static', filename='nota/nota11.pdf') }}" target="_blank" class="text-info">Nota Macromedia Flash</a></p>
+        <p><a href="{{ url_for('static', filename='nota/nota12.pdf') }}" target="_blank" class="text-info">Nota Photopea</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  /* Styling background video */
+  #bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Pastikan video di belakang */
+    object-fit: cover;
+    object-position:center 100%; /* adjust video bawah navigasi menu */
+  }
+
+  /* Styling untuk card supaya lebih jelas atas video */
+  .card {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+</style>
+
+{% endblock %}
